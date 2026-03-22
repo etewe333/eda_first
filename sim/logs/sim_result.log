@@ -1,0 +1,24 @@
+=== RV32I ALU Testbench ===
+[TEST 1] ADD: a=0x5 b=0x3 | expect=0x8 got=0x8 zero_exp=0 got=0 | PASS
+[TEST 2] SUB: a=0xa b=0x4 | expect=0x6 got=0x6 zero_exp=0 got=0 | PASS
+[TEST 3] AND: a=0xff0f b=0xf0ff | expect=0xf00f got=0xf00f zero_exp=0 got=0 | PASS
+[TEST 4] OR: a=0xf0f b=0xf0f0 | expect=0xffff got=0xffff zero_exp=0 got=0 | PASS
+[TEST 5] XOR: a=0xaaaa b=0x5555 | expect=0xffff got=0xffff zero_exp=0 got=0 | PASS
+[TEST 6] SLT: a=0x5 b=0xa | expect=0x1 got=0x1 zero_exp=0 got=0 | PASS
+[TEST 7] SLT: a=0xa b=0x5 | expect=0x0 got=0x0 zero_exp=1 got=1 | PASS
+[TEST 8] ADD: a=0x7fffffff b=0x1 | expect=0x80000000 got=0x80000000 zero_exp=0 got=0 | PASS
+[TEST 9] SUB: a=0x80000000 b=0x1 | expect=0x7fffffff got=0x7fffffff zero_exp=0 got=0 | PASS
+[TEST 10] ADD: a=0xffffffff b=0x1 | expect=0x0 got=0x0 zero_exp=1 got=1 | PASS
+[TEST 11] SLT: a=0x1 b=0xffffffff | expect=0x0 got=0x0 zero_exp=1 got=1 | PASS
+[TEST 12] SLT: a=0xfffffffe b=0xffffffff | expect=0x1 got=0x1 zero_exp=0 got=0 | PASS
+[TEST 13] SLT: a=0x80000000 b=0x80000000 | expect=0x0 got=0x0 zero_exp=1 got=1 | PASS
+[TEST 14] AND: a=0x1 b=0x0 | expect=0x0 got=0x0 zero_exp=1 got=1 | PASS
+[TEST 15] XOR: a=0x80000000 b=0x80000000 | expect=0x0 got=0x0 zero_exp=1 got=1 | PASS
+[TEST 16] SUB: a=0xa b=0xa | expect=0x0 got=0x0 zero_exp=1 got=1 | PASS
+[TEST 17] AND: a=0x80000000 b=0x80000000 | expect=0x80000000 got=0x80000000 zero_exp=0 got=0 | PASS
+[TEST 18] OR: a=0x80000000 b=0x7fffffff | expect=0xffffffff got=0xffffffff zero_exp=0 got=0 | PASS
+[TEST 19] XOR: a=0x55555555 b=0xffffffff | expect=0xaaaaaaaa got=0xaaaaaaaa zero_exp=0 got=0 | PASS
+[TEST 20] SLT: a=0xffffffff b=0x1 | expect=0x1 got=0x1 zero_exp=0 got=0 | PASS
+=== TEST SUMMARY ===
+Passed: 20/20
+Failed: 0/20

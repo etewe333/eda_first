@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -ExecutionPolicy Bypass -File \"D:/zhenziliao/EDA/proj_f/.claude/scripts/detect_env.ps1\")",
+      "Bash(firtool:*)",
+      "Bash(\"E:\\\\ProgramFiles\\\\MSYS2\\\\usr\\\\bin\\\\bash.exe\" -c \"verilator --version\")",
+      "Bash(powershell -File \".claude/scripts/detect_env.ps1\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".claude/skills/riscv-env-check/detect_env.ps1\" 2>&1)",
+      "Bash(\"E:\\\\ProgramFiles\\\\MSYS2\\\\usr\\\\bin\\\\bash.exe\" --login -c \"export PATH='/mingw64/bin:/usr/bin:\\\\$PATH' && export LC_ALL=C && verilator --version\" 2>&1)",
+      "Bash(mkdir -p \"D:\\\\zhenziliao\\\\EDA\\\\proj_f\\\\src\\\\main\\\\scala\")",
+      "Bash(mkdir -p \"D:\\\\zhenziliao\\\\EDA\\\\proj_f\\\\generated\")",
+      "Bash(mkdir -p \"D:\\\\zhenziliao\\\\EDA\\\\proj_f\\\\sim\\\\testbench\")",
+      "Bash(mkdir -p \"D:\\\\zhenziliao\\\\EDA\\\\proj_f\\\\sim\\\\build\")",
+      "Bash(mkdir -p \"D:\\\\zhenziliao\\\\EDA\\\\proj_f\\\\sim\\\\logs\")",
+      "Bash(\"E:\\\\ProgramFiles\\\\MSYS2\\\\usr\\\\bin\\\\bash.exe\" -c \"export PATH='/mingw64/bin:/usr/bin:\\\\$PATH' && export LC_ALL=C && verilator --lint-only -Igenerated 'D:\\\\zhenziliao\\\\EDA\\\\proj_f\\\\generated\\\\ALU.sv' --top-module ALU\" 2>&1)",
+      "Bash(\"E:\\\\ProgramFiles\\\\MSYS2\\\\usr\\\\bin\\\\bash.exe\" -c \"export PATH='/mingw64/bin:/usr/bin:\\\\$PATH' && export LC_ALL=C && mkdir -p 'D:\\\\zhenziliao\\\\EDA\\\\proj_f\\\\tmp' && export TMP='$PWD/tmp' && cd 'D:\\\\zhenziliao\\\\EDA\\\\proj_f' && verilator --cc generated/ALU.sv -Mdir sim/build\" 2>&1)",
+      "Bash(\"E:\\\\ProgramFiles\\\\MSYS2\\\\usr\\\\bin\\\\bash.exe\" -c \"export PATH='/mingw64/bin:/usr/bin:\\\\$PATH' && export LC_ALL=C && mkdir -p 'D:\\\\zhenziliao\\\\EDA\\\\proj_f\\\\tmp' && export TMP='$PWD/tmp' && cd 'D:\\\\zhenziliao\\\\EDA\\\\proj_f' && verilator --cc generated/ALU.sv --exe sim/testbench/ALU_tb.cpp --build -j -Mdir sim/build\" 2>&1)",
+      "Bash(\"E:\\\\ProgramFiles\\\\MSYS2\\\\usr\\\\bin\\\\bash.exe\" -c \"export PATH='/mingw64/bin:/usr/bin:\\\\$PATH' && export LC_ALL=C && mkdir -p 'D:\\\\zhenziliao\\\\EDA\\\\proj_f\\\\sim\\\\logs' && cd 'D:\\\\zhenziliao\\\\EDA\\\\proj_f' && ./sim/build/VALU 2>&1 | tee sim/logs/sim_result.log; echo \\\\\"Exit code: \\\\$?\\\\\"\" 2>&1)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"D:\\\\zhenziliao\\\\EDA\\\\proj_f\\\\.claude\\\\detect_env.ps1\" 2>&1)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"D:\\\\zhenziliao\\\\EDA\\\\proj_f\\\\.claude\\\\skills\\\\riscv-env-check\\\\check_env.ps1\" 2>&1)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"D:\\\\zhenziliao\\\\EDA\\\\proj_f\\\\.claude\\\\skills\\\\riscv-env-check\\\\detect_env.ps1\" 2>&1)",
+      "Bash(powershell -ExecutionPolicy Bypass -File detect_env.ps1)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"D:\\\\zhenziliao\\\\EDA\\\\proj_f\\\\.claude\\\\scripts\\\\check_env.ps1\")",
+      "Bash(E:/ProgramFiles/MSYS2/usr/bin/bash.exe --login -c \"export PATH='/mingw64/bin:/usr/bin:$PATH' && export LC_ALL=C && verilator --lint-only -Igenerated 'D:/zhenziliao/EDA/proj_f/generated/ALU.sv' --top-module ALU\")",
+      "Bash(E:/ProgramFiles/MSYS2/usr/bin/bash.exe --login -c \"export PATH='/mingw64/bin:/usr/bin:\\\\$PATH' && export LC_ALL=C && cd 'D:/zhenziliao/EDA/proj_f' && mkdir -p tmp && export TMP=\\\\$PWD/tmp && verilator --cc generated/ALU.sv --top-module ALU -Mdir sim/build\")",
+      "Bash(E:/ProgramFiles/MSYS2/usr/bin/bash.exe --login -c \"export PATH='/mingw64/bin:/usr/bin:\\\\$PATH' && export LC_ALL=C && cd 'D:/zhenziliao/EDA/proj_f' && mkdir -p tmp && export TMP=\\\\$PWD/tmp && verilator --cc generated/ALU.sv --top-module ALU --exe sim/testbench/ALU_tb.cpp --build -j -Mdir sim/build\")",
+      "Bash(E:/ProgramFiles/MSYS2/usr/bin/bash.exe --login -c \"export PATH='/mingw64/bin:/usr/bin:\\\\$PATH' && export LC_ALL=C && cd 'D:/zhenziliao/EDA/proj_f' && mkdir -p sim/logs && ./sim/build/VALU.exe 2>&1 | tee sim/logs/sim_result.log\")",
+      "Bash(E:/ProgramFiles/MSYS2/usr/bin/bash.exe --login -c \"export PATH='/mingw64/bin:/usr/bin:\\\\$PATH' && export LC_ALL=C && cd 'D:/zhenziliao/EDA/proj_f' && mkdir -p tmp && export TMP=\\\\$PWD/tmp && verilator --cc generated/ALU.sv --top-module ALU --exe sim/testbench/ALU_tb.cpp --build -j -Mdir sim/build 2>&1\")",
+      "Bash(E:/ProgramFiles/MSYS2/usr/bin/bash.exe --login -c \"export PATH='/mingw64/bin:/usr/bin:\\\\$PATH' && export LC_ALL=C && cd 'D:/zhenziliao/EDA/proj_f' && ./sim/build/VALU.exe 2>&1 | tee sim/logs/sim_result.log\")"
+    ]
+  }
+}

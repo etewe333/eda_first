@@ -1,0 +1,4 @@
+[error] D:\zhenziliao\EDA\proj_f\src\main\scala\ALU.scala:55:8: not found: value default
+[error]     is(default) {
+[error]        ^
+[error] one error found
