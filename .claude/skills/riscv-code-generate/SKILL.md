@@ -153,8 +153,9 @@ object <模块名>Gen extends App {
 
 1. **代码头部必须包含**指定的 import 语句
 2. **结尾必须包含**生成器对象
-3. **build.sbt 内容必须精确匹配**，不得修改版本号
-4. 生成的代码应放在 `src/main/scala/` 目录下
+3. switch 语句不需要 default 分支，可用WireInit()设置默认值
+4. **build.sbt 内容必须精确匹配**，不得修改版本号
+5. 生成的代码应放在 `src/main/scala/` 目录下
 
 ## 相关技能
 

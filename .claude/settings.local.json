@@ -26,7 +26,9 @@
       "Bash(E:/ProgramFiles/MSYS2/usr/bin/bash.exe --login -c \"export PATH='/mingw64/bin:/usr/bin:\\\\$PATH' && export LC_ALL=C && cd 'D:/zhenziliao/EDA/proj_f' && mkdir -p tmp && export TMP=\\\\$PWD/tmp && verilator --cc generated/ALU.sv --top-module ALU --exe sim/testbench/ALU_tb.cpp --build -j -Mdir sim/build\")",
       "Bash(E:/ProgramFiles/MSYS2/usr/bin/bash.exe --login -c \"export PATH='/mingw64/bin:/usr/bin:\\\\$PATH' && export LC_ALL=C && cd 'D:/zhenziliao/EDA/proj_f' && mkdir -p sim/logs && ./sim/build/VALU.exe 2>&1 | tee sim/logs/sim_result.log\")",
       "Bash(E:/ProgramFiles/MSYS2/usr/bin/bash.exe --login -c \"export PATH='/mingw64/bin:/usr/bin:\\\\$PATH' && export LC_ALL=C && cd 'D:/zhenziliao/EDA/proj_f' && mkdir -p tmp && export TMP=\\\\$PWD/tmp && verilator --cc generated/ALU.sv --top-module ALU --exe sim/testbench/ALU_tb.cpp --build -j -Mdir sim/build 2>&1\")",
-      "Bash(E:/ProgramFiles/MSYS2/usr/bin/bash.exe --login -c \"export PATH='/mingw64/bin:/usr/bin:\\\\$PATH' && export LC_ALL=C && cd 'D:/zhenziliao/EDA/proj_f' && ./sim/build/VALU.exe 2>&1 | tee sim/logs/sim_result.log\")"
+      "Bash(E:/ProgramFiles/MSYS2/usr/bin/bash.exe --login -c \"export PATH='/mingw64/bin:/usr/bin:\\\\$PATH' && export LC_ALL=C && cd 'D:/zhenziliao/EDA/proj_f' && ./sim/build/VALU.exe 2>&1 | tee sim/logs/sim_result.log\")",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ]
   }
 }
