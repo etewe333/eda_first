@@ -22,7 +22,7 @@ description: RISC-V RTL 代码生成技能。当需要根据功能要求生成Sc
 
 1. **获取功能需求**：
    - 从用户输入中提取硬件功能描述
-   - 读取RISC-V RV32I的指令规范并在后续编程中遵守，功能以用户输入的为准
+   - 读取RV32I的指令规范并在后续编程中遵守，功能以用户输入的为准
    - 确定模块名称、接口信号和功能实现
 
 2. **生成代码结构**：
@@ -116,7 +116,9 @@ object <模块名>Gen extends App {
 
 ## 参考资料
 
+- **ALU 实现模式**: `.claude/skills/riscv-code-generate/ALU_PATTERN.md`
 - RV32I 规范: `references/rv32i-alu.md`
+
 
 ## 输出示例
 
@@ -153,9 +155,12 @@ object <模块名>Gen extends App {
 
 1. **代码头部必须包含**指定的 import 语句
 2. **结尾必须包含**生成器对象
-3. switch 语句不需要 default 分支，可用WireInit()设置默认值
-4. **build.sbt 内容必须精确匹配**，不得修改版本号
-5. 生成的代码应放在 `src/main/scala/` 目录下
+3. **【重要】禁止使用 `switch` + `VecInit` 索引方式** - firtool 会重排序操作
+4. **【重要】必须使用 `MuxCase` 进行操作选择** - firtool 不会重排序
+5. **ADD/SUB 使用 `sub_enable` 区分** - 4位操作码: `{sub_enable, funct3}`
+6. **不需要实现的功能直接返回0即可**，使用 `MuxCase` 的默认值
+7. **build.sbt 内容必须精确匹配**，不得修改版本号
+8. 生成的代码应放在 `src/main/scala/` 目录下
 
 ## 相关技能
 

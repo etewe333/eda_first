@@ -19,7 +19,7 @@
 - **Agent 日志**: `agent/logs/` 
 
 ## 4. 自动化指令流水线
-此技能按顺序执行以下7个步骤：
+此技能按顺序执行以下7个步骤，且自动连续执行直到结果正确
 
 1. **环境自适应探测与工具检查** - 根据技能`riscv-env-check`校验环境指纹（`.claude/env_info.json`）并验证工具链（node, java, sbt, firtool, verilator）。
 2. **目录初始化** - 根据技能`riscv-dir-init`创建规范定义的文件夹（src, generated, sim, agent等）。

@@ -35,7 +35,14 @@ description: Check if generated ALU code conforms to RV32I standard. Use when us
 | 110 | OR | 或 | ✓ |
 | 111 | AND | 与 | ✓ |
 
-非必选项缺失不算错误
+非必选项缺失不算错误，但是如果操作码映射错误则需要重写
+
+**⚠️ 重要：Verilog 数组索引方向**
+
+当分析生成的 Verilog 中 `_GEN` 数组时，必须注意 Verilog 位拼接 `{ }` 的索引方向：
+
+- `wire [N:0] arr = {a, b, c, ...}` 中，第一个元素 `a` 对应最高索引 `[N]`，最后一个元素对应最低索引 `[0]`
+- 检查时要将数组元素顺序**反向映射**到索引 0-N
 
 ### 步骤3: 符号处理检查
 
