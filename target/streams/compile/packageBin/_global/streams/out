@@ -1,13 +1,13 @@
-[debug] Packaging D:\zhenziliao\EDA\proj_f\target\scala-2.13\proj_f_2.13-0.1.0-SNAPSHOT.jar ...
-[debug] Input file mappings:
-[debug] 	ALU$$anon$1.class
-[debug] 	  D:\zhenziliao\EDA\proj_f\target\scala-2.13\classes\ALU$$anon$1.class
-[debug] 	ALU.class
-[debug] 	  D:\zhenziliao\EDA\proj_f\target\scala-2.13\classes\ALU.class
-[debug] 	ALUGen$.class
-[debug] 	  D:\zhenziliao\EDA\proj_f\target\scala-2.13\classes\ALUGen$.class
-[debug] 	ALUGen$delayedInit$body.class
-[debug] 	  D:\zhenziliao\EDA\proj_f\target\scala-2.13\classes\ALUGen$delayedInit$body.class
-[debug] 	ALUGen.class
-[debug] 	  D:\zhenziliao\EDA\proj_f\target\scala-2.13\classes\ALUGen.class
-[debug] Done packaging.
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/runner/work/eda_first/eda_first/target/scala-2.13/eda_first_2.13-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ALUGen$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/runner/work/eda_first/eda_first/target/scala-2.13/classes/ALUGen$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ALU.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/runner/work/eda_first/eda_first/target/scala-2.13/classes/ALU.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ALUGen$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/runner/work/eda_first/eda_first/target/scala-2.13/classes/ALUGen$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ALU$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/runner/work/eda_first/eda_first/target/scala-2.13/classes/ALU$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ALUGen.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/runner/work/eda_first/eda_first/target/scala-2.13/classes/ALUGen.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

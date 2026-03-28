@@ -28,6 +28,14 @@ import _root_.circt.stage.ChiselStage // 用于生成 Verilog
   * 101: SRL/SRA (不支持，返回0)
   * 110: OR
   * 111: AND
+  *
+  * 操作码映射：
+  * alu_op = 0000 → ADD
+  * alu_op = 1000 → SUB
+  * alu_op = 0010 → SLT
+  * alu_op = 0100 → XOR
+  * alu_op = 0110 → OR
+  * alu_op = 0111 → AND
   */
 class ALU extends Module {
   val io = IO(new Bundle {
@@ -45,11 +53,8 @@ class ALU extends Module {
 
   // RV32I funct3编码定义
   val FUNCT3_ADD_SUB = 0.U(3.W)  // 000: ADD/SUB
-  val FUNCT3_SLL     = 1.U(3.W)  // 001: SLL (不支持)
   val FUNCT3_SLT     = 2.U(3.W)  // 010: SLT
-  val FUNCT3_SLTU    = 3.U(3.W)  // 011: SLTU (不支持)
   val FUNCT3_XOR     = 4.U(3.W)  // 100: XOR
-  val FUNCT3_SRL_SRA = 5.U(3.W)  // 101: SRL/SRA (不支持)
   val FUNCT3_OR      = 6.U(3.W)  // 110: OR
   val FUNCT3_AND     = 7.U(3.W)  // 111: AND
 
@@ -64,13 +69,13 @@ class ALU extends Module {
   // SLT: 有符号比较 (a < b ? 1 : 0)
   val slt_result = Mux(io.a.asSInt < io.b.asSInt, 1.U(32.W), 0.U(32.W))
 
-  // 根据funct3选择结果（符合RV32I标准）
-    io.result := MuxLookup(funct3, 0.U(32.W))(Seq(
-    FUNCT3_ADD_SUB -> add_sub_result,
-    FUNCT3_SLT     -> slt_result,
-    FUNCT3_XOR     -> xor_result,
-    FUNCT3_OR      -> or_result,
-    FUNCT3_AND     -> and_result
+  // 根据funct3选择结果（使用MuxCase，firtool不会重排序）
+  io.result := MuxCase(0.U(32.W), Seq(
+    (funct3 === FUNCT3_ADD_SUB) -> add_sub_result,
+    (funct3 === FUNCT3_SLT)     -> slt_result,
+    (funct3 === FUNCT3_XOR)     -> xor_result,
+    (funct3 === FUNCT3_OR)      -> or_result,
+    (funct3 === FUNCT3_AND)     -> and_result
   ))
 
   // 零标志位: 当结果为0时置位
