@@ -79,7 +79,7 @@ assign io_zero   = io_result_0 == 32'h0;               // 零标志
 | [3] | 011 | SLTU | `32'h0`（未实现） | ⚠️ 返回 0 |
 | [4] | 100 | XOR | `io_a ^ io_b` | ✅ 一致 |
 | [5] | 101 | SRL/SRA | `32'h0`（未实现） | ⚠️ 返回 0 |
-| [6] | 110 | OR | `io_a \| io_b` | ✅ 一致 |
+| [6] | 110 | OR | `io_a` &#124; `io_b` | ✅ 一致 |
 | [7] | 111 | AND | `io_a & io_b` | ✅ 一致 |
 
 **结论**：已实现的 6 种操作（ADD/SUB/SLT/XOR/OR/AND）的 funct3 映射**全部正确**。ADD/SUB 通过 `io_alu_op[3]`（sub_enable）区分，符合 RV32I R-type 指令的 funct7[5] 编码。
