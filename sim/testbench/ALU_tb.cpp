@@ -49,7 +49,7 @@ int main(int argc, char** argv) {
 
     std::cout << "=== RV32I ALU Testbench ===" << std::endl;
 
-    // RV32I opcode definitions:
+    // RV32I ALU operation codes (alu_op = {sub_enable, funct3}):
     // ADD = 0x0 (funct3=000, sub_enable=0)
     // SUB = 0x8 (funct3=000, sub_enable=1)
     // SLT = 0x2 (funct3=010)

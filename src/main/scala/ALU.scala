@@ -29,13 +29,13 @@ import _root_.circt.stage.ChiselStage // 用于生成 Verilog
   * 110: OR
   * 111: AND
   *
-  * 操作码映射：
-  * alu_op = 0000 → ADD
-  * alu_op = 1000 → SUB
-  * alu_op = 0010 → SLT
-  * alu_op = 0100 → XOR
-  * alu_op = 0110 → OR
-  * alu_op = 0111 → AND
+  * alu_op编码映射：
+  * alu_op = 0x0 → ADD  (funct3=000, sub_enable=0)
+  * alu_op = 0x8 → SUB  (funct3=000, sub_enable=1)
+  * alu_op = 0x2 → SLT  (funct3=010)
+  * alu_op = 0x4 → XOR  (funct3=100)
+  * alu_op = 0x6 → OR   (funct3=110)
+  * alu_op = 0x7 → AND  (funct3=111)
   */
 class ALU extends Module {
   val io = IO(new Bundle {
