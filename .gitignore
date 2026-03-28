@@ -1,0 +1,7 @@
+# sbt build artifacts
+target/
+project/target/
+project/project/
+
+# Verilator simulation build artifacts
+sim/build/
