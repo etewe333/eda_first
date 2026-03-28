@@ -112,7 +112,7 @@ wire [7:0][31:0] _GEN =
 | ADD/SUB | 000 | 加/减法 | `io_alu_op[3] ? io_a - io_b : io_a + io_b` | ✅ |
 | SLT | 010 | 有符号比较 | `$signed(io_a) < $signed(io_b)` | ✅ |
 | XOR | 100 | 按位异或 | `io_a ^ io_b` | ✅ |
-| OR | 110 | 按位或 | `io_a \| io_b` | ✅ |
+| OR | 110 | 按位或 | `io_a` &#124; `io_b` | ✅ |
 | AND | 111 | 按位与 | `io_a & io_b` | ✅ |
 | SLL | 001 | 未实现 | 返回 0 | ⚠️ 不支持 |
 | SLTU | 011 | 未实现 | 返回 0 | ⚠️ 不支持 |
